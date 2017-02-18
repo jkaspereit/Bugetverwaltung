@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.lebk</groupId>
 	<artifactId>Budgetverwaltung</artifactId>
-	<version>${buver.version}</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Budgetverwaltung</name>
 
 	<properties>
-		<buver.version>0.0.1-SNAPSHOT</buver.version>
+		<buver.version>${project.version}</buver.version>
 	</properties>
 
 	<modules>

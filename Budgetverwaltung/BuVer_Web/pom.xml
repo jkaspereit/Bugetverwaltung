@@ -7,12 +7,12 @@
 	<packaging>jar</packaging>
 
 	<name>BuVer_Web</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Web-Schnittstelle der Budgetverwaltung</description>
 
 	<parent>
 		<groupId>de.lebk</groupId>
 		<artifactId>Budgetverwaltung</artifactId>
-		<version>${buver.version}</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<properties>
@@ -39,7 +39,6 @@
 		<dependency>
 			<groupId>de.lebk</groupId>
 			<artifactId>BuVer_Core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
