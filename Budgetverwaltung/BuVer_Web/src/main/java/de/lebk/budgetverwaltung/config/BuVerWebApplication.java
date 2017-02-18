@@ -1,4 +1,4 @@
-package de.lebk;
+package de.lebk.budgetverwaltung.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
