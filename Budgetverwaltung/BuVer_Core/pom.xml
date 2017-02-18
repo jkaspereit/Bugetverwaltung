@@ -7,4 +7,17 @@
   </parent>
   <artifactId>BuVer_Core</artifactId>
   <name>Java-Logik der BudgetVerwaltung</name>
+  
+  
+  <dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.lebk</groupId>
+			<artifactId>BuVer_DB</artifactId>
+		</dependency>
+  </dependencies>
+  
 </project>

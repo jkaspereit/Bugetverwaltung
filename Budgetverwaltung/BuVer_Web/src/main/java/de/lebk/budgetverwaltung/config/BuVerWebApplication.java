@@ -11,17 +11,13 @@ import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
-@SpringBootApplication
-public class BuVerWebApplication extends WebMvcConfigurerAdapter{
+@SpringBootApplication(scanBasePackages={"de.lebk.budgetverwaltung"})
+public class BuVerWebApplication extends WebMvcConfigurerAdapter {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BuVerWebApplication.class, args);
 	}
-	
-	
-	
-	
-	
+
 	/*
 	 * Wir konfigurieren unser Templating-Zeugs
 	 */
@@ -29,29 +25,28 @@ public class BuVerWebApplication extends WebMvcConfigurerAdapter{
 	public void configureViewResolvers(ViewResolverRegistry registry) {
 		registry.viewResolver(viewResolver());
 	}
-	
+
 	@Bean
 	public ViewResolver viewResolver() {
 		ThymeleafViewResolver resolver = new ThymeleafViewResolver();
 		resolver.setTemplateEngine(templateEngine());
 		return resolver;
 	}
-	
-	@Bean 
+
+	@Bean
 	public SpringTemplateEngine templateEngine() {
 		SpringTemplateEngine engine = new SpringTemplateEngine();
 		engine.setTemplateResolver(templateResolver());
 		return engine;
 	}
-	
+
 	@Bean
 	public ITemplateResolver templateResolver() {
 		ServletContextTemplateResolver resolver = new ServletContextTemplateResolver();
-		resolver.setPrefix("/views/");
+		resolver.setPrefix("/templates/");
 		resolver.setSuffix(".html");
 		resolver.setTemplateMode("HTML5");
 		return resolver;
 	}
-	
-	
+
 }
