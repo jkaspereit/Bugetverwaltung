@@ -9,10 +9,11 @@
 
 	<properties>
 		<buver.version>${project.version}</buver.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<modules>
-		<module>BuVer_Web</module>
+<!-- 		<module>BuVer_Web</module> -->
 		<module>BuVer_Core</module>
 		<module>BuVer_DB</module>
 	</modules>
@@ -27,11 +28,6 @@
 	</parent>
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>de.lebk</groupId>
-				<artifactId>BuVer_Web</artifactId>
-				<version>${buver.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>de.lebk</groupId>
 				<artifactId>BuVer_DB</artifactId>
