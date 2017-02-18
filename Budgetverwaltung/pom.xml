@@ -27,11 +27,11 @@
 	</parent>
 	<dependencyManagement>
 		<dependencies>
-<!-- 			<dependency> -->
-<!-- 				<groupId>de.lebk</groupId> -->
-<!-- 				<artifactId>BuVer_Web</artifactId> -->
-<!-- 				<version>${buver.version}</version> -->
-<!-- 			</dependency> -->
+			<dependency>
+				<groupId>de.lebk</groupId>
+				<artifactId>BuVer_Web</artifactId>
+				<version>${buver.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>de.lebk</groupId>
 				<artifactId>BuVer_DB</artifactId>
