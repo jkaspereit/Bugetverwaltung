@@ -6,8 +6,7 @@
 	<artifactId>BuVer_Web</artifactId>
 	<packaging>jar</packaging>
 
-	<name>BuVer_Web</name>
-	<description>Web-Schnittstelle der Budgetverwaltung</description>
+	<name>Web-Schnittstelle der Budgetverwaltung</name>
 
 	<parent>
 		<groupId>de.lebk</groupId>

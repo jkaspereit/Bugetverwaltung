@@ -13,7 +13,7 @@ public class BeispielController {
 	@Autowired
 	BeispielService services;
 	
-	@RequestMapping("/buver")
+	@RequestMapping("/")
 	public String start(Model model) {
 		model.addAttribute("beispielTyp", services.ladeIrgendwas());
 		return "beispiel";
