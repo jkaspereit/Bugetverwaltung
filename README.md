@@ -30,7 +30,7 @@ Bei genauem Hinsehen stellt man fest, dass das DB- und Core-Projekt in einem gem
 An der Arbeit damit ändert dies kaum etwas - ein Commit des POM-Projektes entspricht einem Commit der Änderungen beider Unterprojekte.
 
 ### Spring
-Alle Projekte Der Budgetverwaltung sind *Spring-Projekte*, sie haben also an irgendeiner Stelle eine Abhängigkeit auf Code aus dem *[Spring-Framework](spring.io)*, einer sehr mächtigen Sammlung aus Open-Source-Frameworks. Für viele Standard-Programmiermuster/-Anforderugnen stellt Spring einfache Lösungen bereit, z.B. Authentifizierung, WebServer/-Anwendugnen, User-Sessions, Verteilung von Services, Datenmanagement, Monitoring, Logging, ...
+Alle Projekte Der Budgetverwaltung sind *Spring-Projekte*, sie haben also an irgendeiner Stelle eine Abhängigkeit auf Code aus dem *Spring-Framework* (spring.io), einer sehr mächtigen Sammlung aus Open-Source-Frameworks. Für viele Standard-Programmiermuster/-Anforderugnen stellt Spring einfache Lösungen bereit, z.B. Authentifizierung, WebServer/-Anwendugnen, User-Sessions, Verteilung von Services, Datenmanagement, Monitoring, Logging, ...
 
 #### Services / Beans
 Ein Beispiel aus unserer Anwendung: Das Web-Projekt benötigt Services aus dem Core-Projekt für seine Arbeit - instanziiert es sich diese einfach? Diese Services selbst brauchen eine Verbindung aus dem Datenbank-Projekt - wo kommt dieser wieder? Kurz: Wer instanziiert welche Service-Klassen, in welcher Reihenfolge und wo werden diese verwaltet?
