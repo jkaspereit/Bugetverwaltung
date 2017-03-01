@@ -24,11 +24,6 @@ public class BeispielDAO {
 	@Autowired
 	Connection con;
 
-	/*
-	 * Wenn man die SQLs vorbereitet sind sie in Masse deutlich schneller +
-	 * Schutz gegen SQL-Injection
-	 * (Geht natuerlich erst, sobald Max die Connection bereitgestellt hat)
-	 */
 	private PreparedStatement erzeugeNeuenX;
 	private PreparedStatement ladeY;
 	private PreparedStatement erhoeheZUmEins;
