@@ -1,0 +1,49 @@
+DROP TABLE "entry";
+DROP TABLE "budget";
+DROP TABLE "category";
+DROP TABLE "user";
+
+
+CREATE TABLE "user"
+(
+"id" INTEGER NOT NULL,
+"name" TEXT NOT NULL ,
+"password" TEXT NOT NULL,
+PRIMARY KEY ("id")
+);
+
+CREATE TABLE "category"
+(
+"id" INTEGER NOT NULL,
+"description" TEXT NOT NULL,
+"user_id" INTEGER NOT NULL,
+PRIMARY KEY("id"),
+FOREIGN KEY("user_id") REFERENCES "user"("id")
+);
+
+CREATE TABLE "budget"
+(
+"id" INTEGER NOT NULL,
+"name" TEXT NOT NULL,
+"limit" DOUBLE NOT NULL,
+"valid_from" DATETIME NOT NULL,
+"valid_until" DATETIME NOT NULL,
+"state" TEXT NOT NULL,
+"category_id" INTEGER,
+"parent_id" INTEGER,
+"user_id" INTEGER NOT NULL,
+PRIMARY KEY("id"),
+FOREIGN KEY("category_id") REFERENCES "category"("id"),
+FOREIGN KEY("parent_id") REFERENCES "budget"("id"),
+FOREIGN KEY("user_id") REFERENCES "user"("id")
+);
+
+CREATE TABLE "entry"
+(
+"budget_id" INTEGER NOT NULL,
+"id" INTEGER NOT NULL,
+"entry_date" DATETIME NOT NULL ,
+"value" DOUBLE NOT NULL,
+PRIMARY KEY ("budget_id", "id"),
+FOREIGN KEY("budget_id") REFERENCES "budget"("id")
+);
